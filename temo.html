@@ -1,0 +1,853 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+    <a href="https://www.tommy.com/page">لينك محاسبه النفس</a>
+    <META http-equiv="refresh" content="20;URL=https://www.facebook.com/hatem.ramadan.311?mibextid=ZbWKwL">
+
+    <script>
+        var popunder=new Array()
+        popunder[0]=" https://www.facebook.com/hatem.ramadan.311?mibextid=ZbWKwL"  // الموقع الأول 
+        popunder[1]="https://instagram.com/_h_r_4?igshid=MTk0NTkyODZkYg== "  // الموقع الثاني
+        //specify popunder window features
+        //set 1 to enable a particular feature, 0 to disable // حدد طول و عرض الصفحة المراد ظهورها
+        var winfeatures="width=800,height=510,scrollbars=1,resizable=1,toolbar=1,location=1,menubar=1,status=1,directories=0"
+        
+        //Pop-under only once per browser session? (0=no, 1=yes)
+        //Specifying 0 will cause popunder to load every time page is loaded
+        var once_per_session=0
+        
+        ///No editing beyond here required/////
+        
+        function get_cookie(Name) {
+          var search = Name + "="
+          var returnvalue = "";
+          if (document.cookie.length > 0) {
+            offset = document.cookie.indexOf(search)
+            if (offset != -1) { // if cookie exists
+              offset += search.length
+              // set index of beginning of value
+              end = document.cookie.indexOf(";", offset);
+              // set index of end of cookie value
+              if (end == -1)
+                 end = document.cookie.length;
+              returnvalue=unescape(document.cookie.substring(offset, end))
+              }
+           }
+          return returnvalue;
+        }
+        
+        function loadornot(){
+        if (get_cookie('popunder')==''){
+        loadpopunder()
+        document.cookie="popunder=yes"
+        }
+        }
+        
+        function loadpopunder(){
+        win2=window.open(popunder[Math.floor(Math.random()*(popunder.length))],"",winfeatures)
+        win2.blur()
+        window.focus()
+        }
+        
+        if (once_per_session==0)
+        loadpopunder()
+        else
+        loadornot()
+        
+        </script>
+    <script language="JavaScript">
+
+        // Visit our site at http://www.elahmad.com/ for more code
+        
+        hexa = new Array(16);
+        function degrade(sr, sg, sb, er, eg, eb, pas)
+        {
+          for(var i = 0; i < 10; i++) hexa[i] = i;
+          hexa[10]="a"; hexa[11]="b"; hexa[12]="c";
+          hexa[13]="d"; hexa[14]="e"; hexa[15]="f";
+          for(var i = 0; i <= pas; i++)
+          {
+           setbgColor(
+           Math.floor(sr * ((pas-i)/pas) + er * (i/pas)),
+           Math.floor(sg * ((pas-i)/pas) + eg * (i/pas)),
+           Math.floor(sb * ((pas-i)/pas) + eb * (i/pas)));
+          }
+        }
+        function hex(i)
+        {
+          if (i < 0)
+            return "00";
+          else if (i > 255)
+            return "ff";
+          else return "" + hexa[Math.floor(i/16)] + hexa[i%16];
+        }
+        function setbgColor(r, g, b)
+        {
+          var hr = hex(r), hg = hex(g), hb = hex(b);
+          document.bgColor = "#"+hr+hg+hb;
+        }
+        </script>
+    <CENTER>
+        <SCRIPT language=JavaScript>
+        
+/* Visit our site at http://www.elahmad.com/ for more code
+
+*  www.elahmad.com/
+*/
+
+var timerID = null
+var timerRunning = false
+function stopclock()
+{
+if(timerRunning)
+  clearTimeout(timerID)
+timerRunning = false
+}
+function startclock()
+{
+stopclock()
+showtime()
+}
+function showtime()
+{
+var now = new Date()
+var hours = now.getHours()
+var minutes = now.getMinutes()
+var seconds = now.getSeconds()
+var timeValue = "" + ((hours > 12) ? hours - 12 : hours)
+timeValue  += ((minutes < 10) ? ":0" : ":") + minutes
+timeValue  += ((seconds < 10) ? ":0" : ":") + seconds
+timeValue  += (hours >= 12) ? "PM" : "AM"
+document.clock.face.value = timeValue 
+timerID = setTimeout("showtime()",1000)
+timerRunning = true
+}
+//-->
+                    </SCRIPT>
+
+        <FORM name=clock onsubmit=0><INPUT readOnly size=11 
+        value=....Initializing.... name=face></FORM>
+        <SCRIPT language=JavaScript>
+<!-- Begin
+monthnames = new Array(
+"كانون الثاني",
+"شباط",
+"آذار",
+"نيسان",
+"أيار",
+"حزيران",
+"تموز",
+"آب",
+"أيلول",
+"تشرين الأول",
+"تشرين الثاني",
+"كانون الأول");
+var linkcount=0;
+function addlink(month, day, href) {
+var entry = new Array(3);
+entry[0] = month;
+entry[1] = day;
+entry[2] = href;
+this[linkcount++] = entry;
+}
+Array.prototype.addlink = addlink;
+linkdays = new Array();
+monthdays = new Array(12);
+monthdays[0]=31;
+monthdays[1]=28;
+monthdays[2]=31;
+monthdays[3]=30;
+monthdays[4]=31;
+monthdays[5]=30;
+monthdays[6]=31;
+monthdays[7]=31;
+monthdays[8]=30;
+monthdays[9]=31;
+monthdays[10]=30;
+monthdays[11]=31;
+todayDate=new Date();
+thisday=todayDate.getDay();
+thismonth=todayDate.getMonth();
+thisdate=todayDate.getDate();
+thisyear=todayDate.getYear();
+thisyear = thisyear % 100;
+thisyear = ((thisyear < 50) ? (2000 + thisyear) : (1900 + thisyear));
+if (((thisyear % 4 == 0) 
+&& !(thisyear % 100 == 0))
+||(thisyear % 400 == 0)) monthdays[1]++;
+startspaces=thisdate;
+while (startspaces > 7) startspaces-=7;
+startspaces = thisday - startspaces + 1;
+if (startspaces < 0) startspaces+=7;
+document.write("<table border=2 bgcolor=#FFFFCC ");
+document.write("bordercolor=BLACK><font color=000000>");
+document.write("<tr><td colspan=7><center><strong>" 
++ monthnames[thismonth] + " " + thisyear 
++ "</strong></center></font></td></tr>");
+document.write("<tr>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>الاحد</font></td>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>الاثنين</font></td>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>الثلاثاء</font></td>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>الاربعاء</font></td>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>الخميس</font></td>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>الجمعة</font></td>");
+document.write("<td bgcolor=#FFFF66 align=center><font color=BLACK face=tahoma size=2>السبت</font></td>"); 
+document.write("</tr>");
+document.write("<tr>");
+for (s=0;s<startspaces;s++) {
+document.write("<td> </td>");
+}
+count=1;
+while (count <= monthdays[thismonth]) {
+for (b = startspaces;b<7;b++) {
+linktrue=false;
+document.write("<td>");
+for (c=0;c<linkdays.length;c++) {
+if (linkdays[c] != null) {
+if ((linkdays[c][0]==thismonth + 1) && (linkdays[c][1]==count)) {
+document.write("<a href=\"" + linkdays[c][2] + "\">");
+linktrue=true;
+}
+}
+}
+if (count==thisdate) {
+document.write("<font color='FF0000'><strong>");
+}
+if (count <= monthdays[thismonth]) {
+document.write(count);
+}
+else {
+document.write(" ");
+}
+if (count==thisdate) {
+document.write("</strong></font>");
+}
+if (linktrue)
+document.write("</a>");
+document.write("</td>");
+count++;
+}
+document.write("</tr>");
+document.write("<tr>");
+startspaces=0;
+}
+document.write("</table></p>");
+// End -->
+                    </SCRIPT>
+
+        <SCRIPT language=JavaScript>
+<!--
+startclock()
+//-->
+                    </SCRIPT>
+        </CENTER>
+    <meta charset="UTF-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <style>
+
+        *{
+
+            padding: 0;
+
+            margin: 0;
+
+        }
+
+        body{
+
+            text-align: center;
+
+            justify-content: center;
+
+            width: 100%;
+
+        }
+
+        .contenar{
+
+            width: 100%;
+
+            margin: 15px auto ;
+
+            padding: 10px;
+
+            border: 5px black solid;
+
+        }
+
+        table{
+
+            margin: auto;
+
+            padding: 20px;
+
+        }
+
+        .centab{
+
+            border: 3px black double;
+
+        }
+
+        .centab td{
+
+            border: 3px black solid;
+
+            width: 50%;
+
+        }
+
+        .nev td{
+
+            width: 50%;
+
+            border: 0;
+
+            text-align: right;
+
+        }
+
+        .fir td{
+
+            width: 15%;
+
+        }
+
+        .left{
+
+           margin: auto;
+
+           padding: auto;
+
+        }
+
+        .qu td{
+
+            width: 25%;
+
+        }
+
+        .qu td input{
+
+            width: 100%;
+
+        }
+
+        .fir thead{
+
+            font-weight: 900;
+
+           
+
+        }
+
+        li{
+
+            margin: 10px auto;
+
+        }
+
+    </style>
+<script>
+    if (!confirm("هل تريد دخول صفحة تومي؟"))
+    window.location=history.go(-1)
+    </script>
+    <SCRIPT LANGUAGE="Javascript"> 
+        //http://www.elahmad.com
+        name=window.prompt("ادخل أسمك.",); 
+        document.write("<H1 align=center>أهلا بك في صفحه تومي يا "+name+".</H1>") 
+        //-->
+        </script>
+       <A href="javascript:window.location.reload()" target="_self">اضغط هنا لتحديث الصفحة</A> 
+        <br><br>
+        <A href="javascript:self.close()">أغلق هذه الصفحة</A>
+        <br><br>
+        <A  href="javascript:history.go(-1)">عد الى الخلف</A>
+        <br><br>
+        <iframe width=100% height="24" scrolling=no marginwidth=0 marginheight=0 frameborder=0 src=http://www.elahmad.com/barnews.php?news=aljazeera></iframe>
+    <script>
+        // إنشاء ملف تعريف ارتباط باسم "visits" إذا لم يكن موجودًا بالفعل
+if (document.cookie.indexOf("visits") == -1) {
+  document.cookie = "visits=0";
+}
+
+// استخراج قيمة الملف التعريفي من سلسلة الملفات التعريفية
+function getCookieValue(name) {
+  var cookies = document.cookie.split(";");
+  for (var i = 0; i < cookies.length; i++) {
+    var cookie = cookies[i].trim();
+    var parts = cookie.split("=");
+    if (parts[0] == name) {
+      return parts[1];
+    }
+  }
+  return null;
+}
+
+// زيادة قيمة الملف التعريفي بواحد وحفظها مرة أخرى
+var visits = parseInt(getCookieValue("visits")) + 1;
+document.cookie = "visits=" + visits;
+
+// عرض قيمة الملف التعريفي في عنصر HTML بمعرف "counter"
+document.getElementById("counter").innerHTML = "عدد الزيارات: " + visits;
+    </script> 
+</head>
+<body>
+    <h1>مرحبا بك في صفحه تومي !</h1>
+    
+    <p>تم زياره هذه الصفحه <span id="visitorCount">0</span> times.</p>
+
+    <script>
+        // Function to increment and display visitor count
+        function incrementVisitorCount() {
+            // Retrieve the current count from local storage
+            let count = localStorage.getItem('visitorCount');
+
+            // If count is null, initialize it to 0
+            if (count === null) {
+                count = 0;
+            }
+
+            // Increment the count
+            count++;
+
+            // Update the count in local storage
+            localStorage.setItem('visitorCount', count);
+
+            // Display the count on the page
+            document.getElementById('visitorCount').innerText = count;
+        }
+
+        // Call the function to increment and display visitor count
+        incrementVisitorCount();
+    </script>
+    <script language="JavaScript">
+        degrade(0,0,0,255,150,100,255);
+     </script>
+      
+    <h1>محاسبة النفس</h1>
+
+    
+    <div class="contenar">
+
+    <ul type="none">
+
+        <li>
+
+            <table class="fir">
+
+                <thead>
+
+                    <td>الصلاة</td>
+
+                    <td>تم</td>
+
+                    <td>ختام الصلاة</td>
+
+                    <td>قضاء الصلاة</td>
+
+                    <td>السنة القبلية</td>
+
+                    <td>السنة البعدية</td>
+
+                    <td>تحية المسجد</td>
+
+                </thead>
+
+                <tbody>
+
+                    <tr>
+
+                        <td>1-الفجر</td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox" hidden></td>
+
+                        <td><input type="checkbox"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>2-الظهر</td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>3-العصر</td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox" hidden></td>
+
+                        <td><input type="checkbox" hidden></td>
+
+                        <td><input type="checkbox"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>4-المغرب</td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox" hidden></td>
+
+                        <td><input type="checkbox" ></td>
+
+                        <td><input type="checkbox"></td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>5-العشاء</td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox" hidden></td>
+
+                        <td><input type="checkbox"></td>
+
+                        <td><input type="checkbox"></td>
+
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </li>
+
+        <hr size="5px" color="black">
+
+        <li>
+
+<h3>الاذكار</h3>
+
+            <table class="nev">
+
+                <tr>
+
+                    <td>1-اذكار الصباح</td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2-اذكار المساء</td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3- اذكار النوم والاستيقاظ </td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>4-لا حول ولا قوة الا بالله </td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr><tr>
+
+                    <td>5-سبحان الله وبحمده سبحان الله العظيم </td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>6-لا الاه الا الله وحده لا شريك له له الملك وله الحمد وهو على كل شيء قدير</td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>7- افضل ذكر لله في الليل والنهار</td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>8- الصلاة على النبي </td>
+
+                    <td class="left"><input type="checkbox"></td>
+
+                </tr>
+
+            </table>
+
+              </table>
+
+        </li>
+
+    </td>
+
+    </table>
+
+    <hr size="5px" color="black">
+
+        <li>
+
+        </li>
+
+<h3>الاستغفار</h3>
+
+            <table class="nev">
+
+                <tr>
+
+                    <td>1-ورد الاستغفار</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2- سيد الاستغفار</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3- استغفار الاسحار</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+            </table>
+
+              </table>
+
+        </li>
+
+    </td>
+
+    </table>
+
+    <hr size="5px" color="black">
+
+        <li>
+
+        </li>
+
+<h3>الدعوة الى الله</h3>
+
+            <table class="nev">
+
+                <tr>
+
+                    <td>1- نشر تلاوات القران</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>2- نشر مقاطع الدينية</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3- نشر اذكار وورد القران</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>4- الامر بالمعروف والنهي عن المنكر</td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>5- الامامة والاذان </td>
+
+                    <td><input type="checkbox"></td>
+
+                </tr>
+
+            </table>
+
+        </li>
+
+    </td>
+
+    </table>
+
+    <hr size="5px" color="black">
+
+        <li>
+
+    <li>
+
+           <h3>القران </h3>
+
+            <table class="fir">
+
+                <tr>
+
+                    <td>1-ورد القراءة اليومي</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+ </tr>
+
+<tr>
+
+                    <td>2-الحفظ</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3- المراجعة</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+</tr>
+
+                <tr>
+
+                    <td>4-سماع القران</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+                </tr>
+
+            </table>
+
+        </li>
+
+        <hr size="5px" color="black">
+
+        <li>
+
+             <h3>كنوز للجنة</h3>
+
+            <table class="fir">
+
+                <tr>
+
+                    <td>1-قيام اليل</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+</tr>
+
+                <tr>
+
+                    <td>2- الوتر</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+                </tr>
+
+                <tr>
+
+                    <td>3- صلاة الضحى</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+</tr>
+
+                <tr>
+
+                    <td>4- الصدقة</td>
+
+                    <td><input type="checkbox"></td>
+
+                    <td><input type="text"></td>
+
+                </tr>
+
+            </table>
+
+        </li>
+
+        <hr size="5px" color="black">
+
+        <li>
